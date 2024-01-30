@@ -1,0 +1,16 @@
+{
+    "data": {
+        "success": true,
+        "data": {
+            "answer_variants": ["yes", "no", "repeat"],
+            "answer": "no",
+            "created_id": "3",
+            "booking_price": "1500",
+            "booking_currency": "UAH",
+            "proposal_discount": "4",
+            "flat_id": "3625"
+        },
+        "errors": []
+    },
+    "code": 200
+}

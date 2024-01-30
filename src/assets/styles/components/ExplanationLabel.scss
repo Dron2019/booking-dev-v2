@@ -1,0 +1,60 @@
+.ExplanationLabel {
+    display: flex;
+    --padding: 20px;
+    padding: var(--padding);
+    align-items: flex-start;
+    align-content: center;
+    --gap: 20px;
+    gap: var(--gap);
+    // flex-wrap: wrap;
+    // flex: 1 0 0;
+
+    border-radius: 20px;
+    border: 1px solid var(--color-stroke-100);
+    background: var(--color-backgrounds-200);
+    @include media-md{
+        --gap: 0;
+    }
+    @include media-xs{
+        --padding: 12px;
+        flex-wrap: nowrap;
+        border-radius: 12px;
+        &>svg {
+            margin-right: calc(var(--padding) / 2);
+        }
+    }
+    &>svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        // width: calc(100% - 24px - var(--gap));
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        @include media-md{
+            column-gap: 0;
+        }
+
+        .InputRow,
+        .CheckboxRow {
+            width: calc(100% - 10px);
+        }
+
+        @media screen and (min-width: 1025px){
+            .InputRow,
+            .CheckboxRow {
+                width: calc(50% - 10px);
+            }
+        }
+
+        [type="submit"] {
+            width: 100%;
+        }
+    }
+}

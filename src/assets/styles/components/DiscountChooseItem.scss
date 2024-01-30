@@ -1,0 +1,61 @@
+.DiscountChooseItem {
+    --transition: all 0.3s ease-in-out;
+    --border: 1px solid var(--color-stroke-100);
+    background: var(--text-color);
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    border: var(--border);
+    cursor: pointer;
+    // transition: var(--transition);
+    position: relative;
+    margin-bottom: 6px;
+
+    &.active {
+        --border: 1px solid var(--color-stroke-900);
+        background: linear-gradient(250deg, #11663D -10.12%, rgba(77, 164, 148, 0.00) 51.23%), linear-gradient(120deg, #1E6933 -31.62%, rgba(110, 228, 143, 0.00) 93.21%), linear-gradient(119deg, rgba(226, 255, 48, 0.00) 13.23%, rgba(226, 255, 48, 0.30) 65.61%), linear-gradient(334deg, #7BAD3B -69.15%, #9BD353 166.51%);
+        box-shadow: 0px 6px 20px 0px rgba(101, 154, 33, 0.80) inset, 0px 8px 20px 0px rgba(106, 149, 60, 0.50), 0px 4px 8px 0px rgba(53, 135, 24, 0.70);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        // transition: var(--transition);
+        transform-origin: center;
+        top: 100%;
+        left: 50%;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 2;
+        width: 8px;
+        height: 8px;
+        background: var(--text-color);
+        border: var(--border);
+        
+    }
+
+    &.active::after {
+        // background: linear-gradient(250deg, #11663D -10.12%, rgba(77, 164, 148, 0.00) 51.23%), linear-gradient(120deg, #1E6933 -31.62%, rgba(110, 228, 143, 0.00) 93.21%), linear-gradient(119deg, rgba(226, 255, 48, 0.00) 13.23%, rgba(226, 255, 48, 0.30) 65.61%), linear-gradient(334deg, #7BAD3B -69.15%, #9BD353 166.51%);
+        background: rgb(119, 173, 56);
+
+    }
+
+
+    &__title {
+        color: var(--color);
+        @include text-style-1920-3-d-h-2;
+    }
+    &__subtitle {
+        color: var(--color-text-800);
+        // 
+        @include text-style-1920-3-d-super-tiny;
+    }
+    &.active &__subtitle {
+        color: var(--color);
+    }
+    &__text {
+        color: var(--color);
+        @include text-style-1920-3-d-body-bold;
+    }
+    
+}

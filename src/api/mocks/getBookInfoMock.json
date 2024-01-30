@@ -1,0 +1,75 @@
+{
+    "discount_price": "5",
+    "discount_currency": "UAH", 
+    "flat_id": "3625",
+    "price_uah": "5634740.02",
+    "price_usd": 149546,
+    "price_m2_uah": 1,
+    "price_m2_usd": 4600,
+    "flat_number": "117",
+    "status": "1",
+    "build": "4",
+    "build_name": "3",
+    "sec": "1",
+    "sec_name": "1",
+    "rooms": "1",
+    "floor": "1",
+    "all_area": "32.51",
+    "life_area": "0",
+    "booking_price": "1500",
+    "booking_currency": "UAH",
+    "booking_deadline": "24",
+    "exchange_rate": 37.68,
+    "price_history": [
+        {
+            "date": "2023-11-29 15:26:43",
+            "currency": {
+                "label": "$",
+                "id": "USD",
+                "symb": "$",
+                "name": "Доллар США",
+                "id_form": 4
+            },
+            "price_uah": 5634740.02,
+            "price_usd": 54000,
+            "price_m2_uah": 173323.29,
+            "price_m2_usd": 4600
+        },
+        {
+            "date": "2023-12-29 15:26:43",
+            "currency": {
+                "label": "$",
+                "id": "USD",
+                "symb": "$",
+                "name": "Доллар США",
+                "id_form": 4
+            },
+            "price_uah": 5634740.02,
+            "price_usd": 70000,
+            "price_m2_uah": 173323.29,
+            "price_m2_usd": 4600
+        },
+        {
+            "date": "2022-09-23 16:18:30",
+            "currency": {
+                "label": "грн",
+                "id": "UAH",
+                "symb": "₴",
+                "name": "Гривна",
+                "id_form": 0
+            },
+            "price_uah": "1561650",
+            "price_usd": 41446.19,
+            "price_m2_uah": 48035.99,
+            "price_m2_usd": 1274.88
+        }
+    ],
+    "discount_range": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+    ]
+}

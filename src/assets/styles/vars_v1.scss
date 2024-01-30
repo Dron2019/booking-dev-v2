@@ -1,0 +1,487 @@
+$color-button-gradient: linear-gradient(to bottom, rgba(241,244,249,0.945) 0%,rgba(220,226,235,0.863) 100%);
+$color-loader-gradient: linear-gradient(to bottom, rgba(107,202,78,0.420) 0%,rgba(124,250,252,0.486) 100%);
+$color-text-100: rgba(255,255,255,1);
+$color-text-700: rgba(68,75,85,1);
+$color-text-800: rgba(47,52,58,1);
+$color-text-900: rgba(17,17,17,1);
+$color-text-attention: rgba(235,87,87,1);
+$color-stroke-100: rgba(220,226,235,1);
+$color-stroke-200: rgba(148,152,158,1);
+$color-stroke-900: rgba(17,17,17,1);
+$color-backgrounds-100: rgba(255,255,255,1);
+$color-backgrounds-200: rgba(241,244,249,1);
+$color-accent-primary-900-stroke: rgba(210,179,29,1);
+$color-accent-primary-800-primary: rgba(224,185,0,1);
+$color-accent-primary-400: rgba(242,220,115,1);
+$color-accent-primary-200: rgba(255,247,206,1);
+$color-accent-secondary-900: rgba(123,173,59,1);
+$color-fail-900: rgba(242,153,74,1);
+$color-status-free: rgba(0,186,7,1);
+$color-icon-dark: rgba(17,17,17,1);
+$color-icon-noclick: rgba(148,152,158,1);
+$color-icon-secondary: rgba(123,173,59,1);
+$color-icon-noactive: rgba(241,244,249,1);
+$color-sale-chance-the-biggest: rgba(0,186,7,1);
+$color-sale-chance-big: rgba(157,198,46,1);
+$color-sale-chance-middle: rgba(238,200,70,1);
+$color-sale-chance-small: rgba(232,138,85,1);
+$color-sale-chance-the-smallest: rgba(206,73,65,1);
+$color-input-default: rgba(148,152,158,1);
+$color-input-filling: rgba(17,17,17,1);
+$color-input-success: rgba(123,173,59,1);
+$color-input-error: rgba(235,87,87,1);
+@mixin text-style-1920-3-d-h-1() {
+	font-size: 2.5vw;
+	@include media-md {
+		font-size: 48px;
+	}
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-h-2() {
+	font-size: 1.66vw;
+	@include media-md {
+		font-size: 32px;
+	}
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-h-3() {
+	font-size: 1.25vw;
+	@include media-md {
+		font-size: 24px;
+	}
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 120%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-h-4() {
+	font-size: 1.04vw;
+	@include media-md {
+		font-size: 20px;
+	}
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 120%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-body() {
+	font-size: 0.8333vw;
+	@include media-md {
+		font-size: 16px;
+	}
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-body-bold() {
+	font-size: 0.8333vw;
+	@include media-md {
+		font-size: 16px;
+	}
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-small() {
+	font-size: 0.6777vw;
+	@include media-md {
+		font-size: 13px;
+	}
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-small-old-price() {
+	font-size: 0.6777vw;
+	@include media-md {
+		font-size: 13px;
+	}
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: line-through;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-tiny() {
+	font-size: 12px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 140%;
+	letter-spacing: -0.03em;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1920-3-d-super-tiny() {
+	font-size: 10px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1366-h-1() {
+	font-size: 40px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1366-h-2() {
+	font-size: 28px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-1366-h-3() {
+	font-size: 20px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 120%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-360-h-1() {
+	font-size: 32px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-360-h-2() {
+	font-size: 24px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+:root {
+	--color-button-gradient: linear-gradient(to bottom, rgba(241,244,249,0.945) 0%,rgba(220,226,235,0.863) 100%);
+	--color-loader-gradient: linear-gradient(to bottom, rgba(107,202,78,0.420) 0%,rgba(124,250,252,0.486) 100%);
+	--color-text-100: rgba(255,255,255,1);
+	--color-text-700: rgba(68,75,85,1);
+	--color-text-800: rgba(47,52,58,1);
+	--color-text-900: rgba(17,17,17,1);
+	--color-text-attention: rgba(235,87,87,1);
+	--color-stroke-100: rgba(220,226,235,1);
+	--color-stroke-200: rgba(148,152,158,1);
+	--color-stroke-900: rgba(17,17,17,1);
+	--color-backgrounds-100: rgba(255,255,255,1);
+	--color-backgrounds-200: rgba(241,244,249,1);
+	--color-accent-primary-900-stroke: rgba(210,179,29,1);
+	--color-accent-primary-800-primary: rgba(224,185,0,1);
+	--color-accent-primary-400: rgba(242,220,115,1);
+	--color-accent-primary-200: rgba(255,247,206,1);
+	--color-accent-secondary-900: rgba(123,173,59,1);
+	--color-fail-900: rgba(242,153,74,1);
+	--color-status-free: rgba(0,186,7,1);
+	--color-icon-dark: rgba(17,17,17,1);
+	--color-icon-noclick: rgba(148,152,158,1);
+	--color-icon-secondary: rgba(123,173,59,1);
+	--color-icon-noactive: rgba(241,244,249,1);
+	--color-sale-chance-the-biggest: rgba(0,186,7,1);
+	--color-sale-chance-big: rgba(157,198,46,1);
+	--color-sale-chance-middle: rgba(238,200,70,1);
+	--color-sale-chance-small: rgba(232,138,85,1);
+	--color-sale-chance-the-smallest: rgba(206,73,65,1);
+	--color-input-default: rgba(148,152,158,1);
+	--color-input-filling: rgba(17,17,17,1);
+	--color-input-success: rgba(123,173,59,1);
+	--color-input-error: rgba(235,87,87,1);
+}
+
+
+.text-color-button-gradient {
+    background: $color-button-gradient;
+}
+
+.text-color-loader-gradient {
+    background: $color-loader-gradient;
+}
+
+.text-color-text-100 {
+    color: $color-text-100;
+}
+
+.text-color-text-700 {
+    color: $color-text-700;
+}
+
+.text-color-text-800 {
+    color: $color-text-800;
+}
+
+.text-color-text-900 {
+    color: $color-text-900;
+}
+
+.text-color-text-attention {
+    color: $color-text-attention;
+}
+
+.text-color-stroke-100 {
+    color: $color-stroke-100;
+}
+
+.text-color-stroke-200 {
+    color: $color-stroke-200;
+}
+
+.text-color-stroke-900 {
+    color: $color-stroke-900;
+}
+
+.text-color-backgrounds-100 {
+    background-color: $color-backgrounds-100;
+}
+
+.text-color-backgrounds-200 {
+    background-color: $color-backgrounds-200;
+}
+
+.text-color-accent-primary-900-stroke {
+    color: $color-accent-primary-900-stroke;
+}
+
+.text-color-accent-primary-800-primary {
+    color: $color-accent-primary-800-primary;
+}
+
+.text-color-accent-primary-400 {
+    color: rgba(242,220,115,1);
+}
+
+.text-color-accent-primary-200 {
+    color: $color-accent-primary-200
+}
+
+.text-color-accent-secondary-900 {
+    color: $color-accent-secondary-900;
+}
+
+.text-color-fail-900 {
+    color: $color-fail-900;
+}
+
+.text-color-status-free {
+    color: $color-status-free;
+}
+
+.text-color-icon-dark {
+    color: $color-icon-dark;
+}
+
+.text-color-icon-noclick {
+    color: $color-icon-noclick;
+}
+
+.text-color-icon-secondary {
+    color: $color-icon-secondary;
+}
+
+.text-color-icon-noactive {
+    color: $color-icon-noactive;
+}
+
+.text-color-sale-chance-the-biggest {
+    color: $color-sale-chance-the-biggest;
+}
+
+.text-color-sale-chance-big {
+    color: $color-sale-chance-big;
+}
+
+.text-color-sale-chance-middle {
+    color: $color-sale-chance-middle;
+}
+
+.text-color-sale-chance-small {
+    color: $color-sale-chance-small;
+}
+
+.text-color-sale-chance-the-smallest {
+    color: $color-sale-chance-the-smallest;
+}
+
+.text-color-input-default {
+    color: $color-input-default 
+}
+
+.text-color-input-filling {
+    color: $color-input-filling;
+}
+
+.text-color-input-success {
+    color: $color-input-success;
+}
+
+.text-color-input-error {
+    color: $color-input-error;
+}
+
+
+
+.text-style-1920-3-d-h-1 {
+    @include text-style-1920-3-d-h-1;
+	@include media-xs {
+		@include text-style-360-h-1;
+	}
+}
+.text-style-1920-3-d-h-2 {
+    @include text-style-1920-3-d-h-2;
+	@include media-xs {
+		@include text-style-360-h-2;
+	}
+}
+.text-style-1920-3-d-h-3 {
+	@include text-style-1920-3-d-h-3;
+	@include media-xs {
+		@include text-style-1366-h-3;
+	}
+}
+.text-style-1920-3-d-h-4 {
+	font-size: 20px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 120%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1920-3-d-body {
+	font-size: 16px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1920-3-d-body-bold {
+	font-size: 16px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1920-3-d-small {
+	font-size: 13px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1920-3-d-small-old-price {
+	font-size: 13px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: line-through;
+	text-transform: none;
+}
+.text-style-1920-3-d-tiny {
+	font-size: 12px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 140%;
+	letter-spacing: -0.03em;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1920-3-d-super-tiny {
+	font-size: 10px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1366-h-1 {
+	font-size: 40px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1366-h-2 {
+	font-size: 28px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-1366-h-3 {
+	font-size: 20px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 120%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-360-h-1 {
+	font-size: 32px;
+	font-family: "Gilroy";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-360-h-2 {
+	font-size: 24px;
+	font-family: "Gilroy";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 90%;
+	text-decoration: none;
+	text-transform: none;
+}

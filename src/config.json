@@ -1,0 +1,112 @@
+{
+
+    "DISABLE_DISCOUNT": false,
+    "year_annual_income_percent": 0.1,
+    "project_title": "MOUNTAIN RESIDENCE",
+    "logo_src": "/wp-content/themes/3d/assets/online-booking/dist/logo.png?v=2",
+    "manager": {
+        "name": "Анна",
+        "phone": "+38 (067) 123-45-67"
+    },
+    "pdf": {
+        "background_color": "#ffffff"
+    },
+    "dashboardPortalSelector": ".s3d-flat__info-container",
+    "callBookingFormSelector": ".s3d-flat__menu-container",
+    "currencies": {
+        "USD": "$",
+        "EUR": "€",
+        "UAH": "грн."
+    },
+
+    "statuses": {
+        "0":{ 
+            "text": "Продано",
+            "color": "#E0B900"
+        },
+        "1":{ 
+            "text": "Вільно",
+            "color": "#00BA07",
+            "aviable": true
+        },
+        "2":{ 
+            "text": "Резерв",
+            "color": "#E0B900"
+        },
+        "3":{ 
+            "text": "Бронь",
+            "color": "#E0B900"
+        },
+        "4":{ 
+            "text": "Недоступно",
+            "color": "#E0B900"
+        },
+        "5":{ 
+            "text": "Заблокировано",
+            "color": "#E0B900"
+        }
+    },
+    
+
+
+    "form": [
+        {
+            "type": "text",
+            "name": "name",
+            "label_key": "Имя",
+            "label": "Ім'я",
+            "is_required": true,
+            "invalid_message": "Введіть ім'я",
+            "input_pattern": "[^a-zA-Z\u0430-\u049f\\s'`]*",
+            "value": ""
+        },
+        {
+            "name" : "phone",
+            "type" : "phone",
+            "label": "Телефон:",
+            "label_key": "Телефон",
+            "is_required": true,
+            "invalid_message": "Введіть телефон в форматі +38 (0XX) XXX-XX-XX",
+            "validationExspression": "[0-9a-zA-Z]{10,}",
+            "value": ""
+        },
+        {
+            "name" : "surname",
+            "type" : "text",
+            "label": "Прізвище:",
+            "label_key": "Прізвище",
+            "input_pattern": "[^a-zA-Z\u0430-\u049f\\s'`]*",
+            "is_required": false,
+            "value": ""
+        },
+        {
+            "name" : "email",
+            "type" : "text",
+            "is_required": true,
+            "validationExspression": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+            "label": "Email:",
+            "label_key": "Email",
+            "value": ""
+        },
+        {
+            "type": "checkbox",
+            "name" : "agreement",
+            "label_key": "agreement",
+            "label": "Погодження на обробку персональних даних",
+            "is_required": true,
+            "validationExspression": "[0-9a-zA-Z]{4,}",
+            "value": ""
+        },
+        {
+            "type": "checkbox",
+            "name" : "offerta",
+            "label_key": "offerta",
+            "label": "Я приймаю умови $offerta_agreeement{{'Договору оферти'}}",
+            "is_required": true,
+            "validationExspression": "[0-9a-zA-Z]{4,}",
+            "value": ""
+        }
+    ],
+    "BOOKING_REUSULT_NEGATIVE_STATUSES": ["not found", "error"],
+    "BOOKING_REUSULT_POSITIVE_STATUSES": ["success"]
+}

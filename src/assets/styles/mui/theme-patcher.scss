@@ -1,0 +1,37 @@
+.MuiBox-black-border {
+    border-radius: 20px;
+    border: 1px solid var(--color-text-900);
+    // overflow: hidden;
+    flex-grow: 1;
+    padding: 10px;
+    overflow: hidden;
+    @include media-xs {
+        border-radius: 12px;
+    }
+}
+
+
+.MuiBox-black-border-large {
+    border-radius: 20px;
+    border: 1px solid var(--color-text-900);
+    // overflow: hidden;
+    flex-grow: 1;
+    padding: 19px;
+    @include media-xs {
+        padding: 11px;
+        border-radius: 12px;
+    }
+}
+
+.MuiBox-gray-border-large {
+    border-radius: 20px;
+    border: 1px solid var(--color-stroke-100);
+    // overflow: hidden;
+    flex-grow: 1;
+    padding: 20px;
+    @include media-xs {
+        padding: 12px;
+        border-radius: 12px;
+    }
+}
+

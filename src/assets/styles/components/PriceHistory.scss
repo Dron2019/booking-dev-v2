@@ -1,0 +1,75 @@
+.PriceHistory {
+
+    &__header {
+        .MuiAccordionSummary-content {
+            column-gap: 8px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media-xs {
+            flex-wrap: wrap;
+            
+            
+            
+            &>:first-child {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            
+            }
+        }
+    }
+    &__row~&__row {
+        margin-top: 12px;
+        @include media-xs {
+            border-top: 1px solid var(--color-gray-1);
+            padding-top: 10px;
+        }
+    }
+
+    .Mui-expanded {
+        // min-height: 48px !important;
+    }
+
+    .MuiAccordionSummary-root {
+        border-radius: 4px;
+        border: 1px solid var(--color-stroke-200);
+        background: var(--color-button-gradient);
+        transition: .25s ease-in-out;
+        min-height: 36px;
+        &:hover {
+            background: linear-gradient(180deg, #DCE2EB 0%, #F1F4F9 100%);
+        }
+
+        @include media-xs {
+            min-height: 36px;
+            .MuiAccordionSummary-expandIconWrapper,
+            .MuiAccordionSummary-content  {
+                align-items: center;
+            }
+            .Mui-expanded  {
+                min-height: 36px;
+                margin: 4px 0;
+            }
+        }
+    }
+
+    .MuiAccordionDetails-root {
+        border-radius: 4px;
+        border: 1px solid var(--color-stroke-200);
+        background: var(--color-backgrounds-200);
+        padding: 20px 12px;
+        position: relative;
+            z-index: 2;
+    }
+
+    .MuiCollapse-root {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+    }
+}

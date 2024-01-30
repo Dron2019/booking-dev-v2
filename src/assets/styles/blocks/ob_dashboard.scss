@@ -1,0 +1,198 @@
+#root .ob_dashboard {
+    position: static;
+}
+
+.ob_dashboard {
+    border-radius: 20px;
+    border: 1px solid var(--Black, #111);
+
+    background: var(--White, #FFF);
+    padding: 20px;
+    width: 380px;
+    --inner-blocks-padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    row-gap: 8px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    @include media-md {
+        width: auto;
+    }
+    @include media-xs {
+        row-gap: 0;
+        padding: 12px;
+
+        width: auto;
+        position: static;
+        margin-top: 10px;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    &--no-border {
+        border: none;
+        padding: 0;
+    }
+
+    &__price-block {
+        border-radius: 12px;
+        // border: 1px solid #D2AF04;
+        background: var(--color-accent-primary-800-primary);
+        width: 50%;
+        overflow: hidden;
+        border-collapse: collapse;
+        border: 1px solid var(--color-accent-primary-900-stroke);
+        th, td {
+            border: 1px solid #D2AF04;
+        }
+        td {
+            padding: var(--inner-blocks-padding);
+            @include media-xs {
+                padding: calc(var(--inner-blocks-padding) / 2) var(--inner-blocks-padding);
+                &[style*="background"]>* {
+                    display: inline-block;
+                    width: 50%;
+                }
+            }
+        }
+        @include media-md{
+            width: 100%;
+        }
+    }
+    &__price-block-bottom-row {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        &>:first-child {
+            width: 50%;
+            text-transform: uppercase;
+        }
+        &>:last-child {
+            width: 50%;
+            text-align: left;
+        }
+        @include media-xs {
+            display: flex !important;
+            width: 100% !important;
+            &>:first-child {
+                width: 50%;
+            }
+            &>:last-child {
+                width: 50%;
+                text-align: left;
+            }
+        }
+    }
+
+    &__price-block-top-row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        &>:last-child {
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+        }
+        @include media-xs {
+            flex-direction: row;
+            flex-wrap: wrap;
+            &>:first-child {
+                width: 100%;
+            }
+            &>:nth-child(n+2) {
+                flex-grow: 1;
+                // width: calc(50% - 4px);
+            }
+            &>:last-child {
+                flex-wrap: wrap;
+
+            }
+
+        }
+    }
+    &__status-block {
+        width: 50%;
+        border-radius: 12px;
+        border: 1px solid var(--color-stroke-100);
+        display: flex;
+        flex-direction: column;
+        &-row {
+            display: flex;
+            align-items: center;
+            &>:first-child {
+                max-width: 65%;
+                @include media-md{
+                    max-width: none;
+                    flex-grow: 1;
+                }
+            }
+        }
+        &-row~&-row {
+            border-top: 1px solid var(--color-stroke-100);
+        }
+        &-row--column {
+            flex-direction: column;
+            align-items: flex-start;
+            @include media-md{
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                &>:first-child {
+                    flex-grow: 0;
+                    margin-right: 8px;
+                }
+            }
+        }
+        &>* {
+            padding: 8px 12px;
+        }
+        @include media-md{
+            width: 100%;
+        }
+    }
+
+
+    &__price-block-wide {
+        width: 100%;
+    }
+    &__price-block-tiny {
+        width: 50%;
+        padding: var(--inner-blocks-padding);
+    }
+    &>a,
+    .ob_button_large,
+    .PriceHistory {
+        width: 100%;
+    }
+    
+
+    &--column {
+        flex-direction: column;
+        &>* {
+            width: 100%;
+        }
+    }
+
+}
+
+.ob_status-label {
+    color: var(--color-backgrounds-100);
+    span {
+        padding: 4px 8px;
+        @include text-style-1920-3-d-small
+    }
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.s3d-flat__info-container {
+    overflow: visible;
+}

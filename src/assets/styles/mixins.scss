@@ -1,0 +1,15 @@
+@mixin media-notebooks {
+    @media screen and (max-width: 1360px) {
+        @content;
+    }
+}
+@mixin media-md {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin media-xs {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}

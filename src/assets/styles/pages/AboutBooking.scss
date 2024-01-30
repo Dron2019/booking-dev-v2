@@ -1,0 +1,9 @@
+.AboutBooking {
+    .MuiBox-root {
+        @include media-xs {
+            border-radius: 12px !important;
+            padding: 20px 12px !important;
+            width: calc(100% - 20px) !important;
+        }
+    }
+}

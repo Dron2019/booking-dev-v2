@@ -1,0 +1,41 @@
+.UserDataTable {
+    border-radius: 12px;
+    border: 1px solid var(--color-stroke-100);
+    flex-grow: 1;
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 12px;
+        column-gap: 8px;
+        @include media-xs {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__row~&__row {
+        border-top: 1px solid var(--color-stroke-100);
+    }
+    &__label {
+        color: var(--color-text-700);
+        @include text-style-1920-3-d-small;
+        width: 30%;
+        @include media-xs {
+            width: 100%;
+        }
+    }
+    &__value {
+        color: var(--color-text-900);
+        @include text-style-1920-3-d-body-bold;
+        width: 70%;
+        @include media-xs {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &>* {
+                width: 50%;
+            }
+        }
+    }
+}

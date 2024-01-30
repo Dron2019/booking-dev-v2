@@ -1,0 +1,42 @@
+.ob_button_question {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--color-icon-dark);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: var(--color-icon-dark);
+
+
+    text-align: right;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 20.8px */
+
+    transition: .25s ease-out;
+    
+
+    &:hover {
+        border-radius: 4px;
+        border: 1px solid var(--color-icon-dark);
+        background-color: var(--color-icon-dark);
+        color: var(--color-text-100);
+    }
+
+    &--dark {
+        border: 1px solid var(--color-icon-dark);
+        background-color: var(--color-icon-dark);
+        color: var(--color-text-100);
+    }
+    &--dark:hover {
+        border-color: var(--color-text-100);
+        background-color: var(--color-text-100);
+        color: var(--color-icon-dark);
+    }
+}

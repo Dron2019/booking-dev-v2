@@ -1,0 +1,71 @@
+.InfoAboutApartment {
+    display: flex;
+    // width: 500px;
+    padding: 28px 0px 28px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -1px;
+    flex-shrink: 0;
+
+    border-radius: 40px 0px 0px 40px;
+    background: var(--White, #FFF);
+
+    &__border {
+        border-radius: 20px;
+        border: 1px solid var(--color-stroke-100);
+        padding: 20px;
+        &>img {
+            width: 125px;
+            height: 125px;
+            object-fit: contain;
+            margin: 8px auto;
+        }
+    }
+
+    &__row {
+        display: flex;
+        padding: 8px 12px;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        &>:last-child,
+        &>:first-child {
+            flex-basis: 50%;
+        }
+        @include media-xs {
+        }
+    }
+
+    &__row~&__row {
+        border-top: 1px solid var(--color-stroke-100);
+    }
+    @media screen and (max-width: 1320px) {
+        // width: 100%;
+        border-radius: 40px;
+        padding: 28px;
+        margin: auto;
+    }
+
+    @include media-notebooks {
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        &__border {
+            width: 100%;
+        }
+    }
+    @include media-md {
+        width: 100%;
+        &__border {
+            width: 100%;
+        }
+    }
+    @include media-xs {
+        padding: 12px;
+        border-radius: 12px 12px 0px 0px;
+        &__border {
+            padding: 11px;
+        }
+    }
+
+}

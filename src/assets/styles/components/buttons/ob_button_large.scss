@@ -1,0 +1,41 @@
+.ob_button_large {
+    border-radius: 4px;
+    border: 1px solid rgba(24, 89, 19, 0.40);
+    background: linear-gradient(250deg, #11663D -10.12%, rgba(77, 164, 148, 0.00) 51.23%), linear-gradient(120deg, #1E6933 -31.62%, rgba(110, 228, 143, 0.00) 93.21%), linear-gradient(119deg, rgba(226, 255, 48, 0.00) 13.23%, rgba(226, 255, 48, 0.30) 65.61%), linear-gradient(334deg, #7BAD3B -69.15%, #9BD353 166.51%);
+    box-shadow: 0px 6px 20px 0px rgba(101, 154, 33, 0.80) inset, 0px 8px 20px 0px rgba(106, 149, 60, 0.50), 0px 4px 8px 0px rgba(53, 135, 24, 0.70);
+
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0px 1px 1px #669827;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    transition: .25s ease-in-out;
+    min-height: 70px;
+    a {
+        color: inherit;
+        font-weight: inherit;
+        &:hover {
+            color: inherit !important;
+        }
+    }
+    button,
+    svg {
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    // &:hover {
+    //     background: linear-gradient(250deg, #093621 -10.12%, rgba(77, 164, 148, 0.20) 51.23%), linear-gradient(120deg, #082D12 -31.62%, rgba(110, 228, 143, 0.20) 93.21%), linear-gradient(119deg, rgba(226, 255, 48, 0.00) 13.23%, rgba(226, 255, 48, 0.30) 65.61%), linear-gradient(334deg, #7BAD3B -69.15%, #9BD353 166.51%);
+    //     box-shadow: 0px 6px 20px 0px rgba(33, 154, 60, 0.80) inset, 0px 8px 20px 0px rgba(106, 149, 60, 0.50), 0px 4px 8px 0px rgba(53, 135, 24, 0.70);
+    // }
+}

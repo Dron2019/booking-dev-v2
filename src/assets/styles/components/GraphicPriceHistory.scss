@@ -1,0 +1,122 @@
+.GraphicPriceHistory {
+    $padding: 8px 45px 8px 12px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.70);
+    z-index: 20;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    &>* {
+        cursor: initial;
+    }
+    &__title {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+    &__content {
+        padding: 40px;
+        background-color: var(--color-backgrounds-100);
+        border-radius: 40px;
+        position: relative;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%,-50%);
+        width: min(100%, 600px);
+        animation: GraphicPriceHistory__show 0.3s ease-out 1;
+        @include media-xs {
+            padding: 12px;
+            border-radius: 12px;
+        }
+        a {
+            margin-top: 12px;
+            display: flex;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+    .c3-area-profit {
+        fill: url('#chart-gradient') !important;
+        opacity: 1 !important;
+    }
+
+    .tick tspan {
+        @include text-style-1920-3-d-body-bold;
+        font-size: 12px;
+        
+        @include media-xs {
+            font-size: 10px;
+        }
+    }
+    .c3-axis-x .tick:nth-child(odd) text {
+        transform: translateY(12px);
+    }
+    .c3-line {
+        stroke: var(--color-text-900) !important;
+    }
+    circle {
+        color: var(--color-text-900) !important;
+    }
+
+    .c3-tooltip-container {
+        border-radius: 6px !important;
+        overflow: hidden;
+    }
+    .c3-tooltip {
+        border: 1px solid var(--Stroke-100, #DCE2EB);
+        background: var(--Backgrounds-100, #FFF);
+        box-shadow: none;
+        @include text-style-1920-3-d-body;
+        opacity: 1;
+        table {
+            
+            border-radius: 6px;
+            overflow: hidden !important;
+            border: none !important;
+        }
+        tr {
+            border: none;
+        }
+        td {
+            border: none;
+            background: #FFF !important;
+            padding: $padding;
+            border-top: 1px dashed var(--color-stroke-100);
+        }
+        .value {
+            text-align: left;
+        }
+        [colspan="2"] {
+            background-color: var(--color-backgrounds-100);
+            color: var(--color-text-900);
+            @include text-style-1920-3-d-body-bold;
+            padding: $padding;
+        }
+    }
+}
+
+
+@keyframes GraphicPriceHistory__show {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

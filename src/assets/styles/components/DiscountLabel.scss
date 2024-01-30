@@ -1,0 +1,37 @@
+.DiscountLabel {
+    padding: 0.83vw 19px;
+    border-radius: 12px;
+    border: 4px solid var(--border-color, #000000);
+    @include text-style-1920-3-d-h-2;
+    
+    background-color: var(--background-color, transparent);
+
+    max-width: calc(10ch + 1.66vw);
+    // width: 80px;
+    height: 58px;
+    display: flex;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+
+    @include media-xs {
+        padding: 11.5px 5px;
+        @include text-style-360-h-2;
+        width: max-content;
+        height: auto;
+    }
+
+    &--with-bg {
+        color: var(--color-text-100);
+        padding: 4px 8px;
+        width: 48px;
+        height: 35px;
+        @include text-style-1920-3-d-h-3;
+        @include media-xs {
+            @include text-style-1366-h-3;
+            border-radius: 4px;
+        }
+    }
+}

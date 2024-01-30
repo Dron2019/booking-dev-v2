@@ -1,0 +1,78 @@
+@mixin layoutNotebooksAndMD {
+    --padding: 19px;
+    max-height: none;
+    height: auto;
+    overflow: initial;
+    flex-shrink: 0;
+    
+    position: static;
+    margin-top: -1px;
+}
+
+.PopupLayout {
+
+    max-height: 100%;
+    height: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+
+    --padding: 27px;
+    border-radius: 0px 40px 40px 40px;
+    background: var(--color-backgrounds-100);
+    padding: var(--padding);
+
+    @include media-notebooks {
+        @include layoutNotebooksAndMD;
+    }
+    @include media-md{
+        @include layoutNotebooksAndMD;
+    }
+    @include media-xs{
+        --padding: 12px;
+        position: static;
+        
+        border-radius: 0px 0px 12px 12px;
+        
+    }
+    &__close {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 24px;
+        height: 24px;
+        transform-origin: center;
+        transition: .25s ease-in-out;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        @include media-xs {
+            right: 10px;
+            top: 10px;
+        }
+    }
+    &__border {
+        border-radius: 20px;
+        border: 1px dashed var(--color-text-900);
+        background: var(--color-backgrounds-100);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: var(--padding);
+        min-height: 100%;
+    }
+
+    .ob_dashboard {
+        position: static;
+    }
+
+    @media screen and (max-width: 1320px){
+        // border-radius: 40px;
+        // width: 100%;
+    }
+    
+}

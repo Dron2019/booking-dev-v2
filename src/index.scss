@@ -1,0 +1,128 @@
+@import 'reset-css';
+:focus-visible {
+  outline: none
+}
+
+
+@import '../node_modules/react-phone-number-input/style';
+
+@import '../node_modules/c3/c3.css';
+
+@import './assets/styles/mixins';
+
+
+// @import './assets/styles/vars';
+@import './assets/styles/vars_v1';
+@import './assets/styles/fonts';
+
+@import './assets/styles/external/index';
+@import './assets/styles/mui/theme-patcher.scss';
+
+@import './assets/icons/icons';
+
+@import './assets/styles/pages/AboutBooking';
+
+@import './assets/styles/blocks/ob_dashboard';
+@import './assets/styles/components/InfoAboutApartment';
+@import './assets/styles/components/ExplanationLabel';
+@import './assets/styles/components/PriceHistory';
+@import './assets/styles/components/GraphicPriceHistory';
+@import './assets/styles/components/DiscountLabel';
+@import './assets/styles/components/UserDataTable';
+@import './assets/styles/components/UserDataList';
+@import './assets/styles/components/DiscountChooser';
+@import './assets/styles/components/DiscountChooseItem';
+@import './assets/styles/components/Loader';
+@import './assets/styles/components/AnnualIncomesLabel';
+
+@import './assets/styles/components/development/DevMenu';
+
+@import './assets/styles/components/form/InputRow';
+@import './assets/styles/components/form/CheckboxRow';
+@import './assets/styles/components/form/Checkbox';
+
+@import './assets/styles/components/layouts/PopupLayout';
+@import './assets/styles/components/layouts/PopupWrapper';
+
+@import './assets/styles/components/buttons/ob_button_question';
+@import './assets/styles/components/buttons/ob_button_large';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-black);
+    background-color: #ffffff;
+  }
+  .MuiModal-root,
+  #root {
+    a:hover {
+      color: var(--color-green);
+    }
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+header {
+  display: none !important;
+}
+
+.s3d-flat__image-container .s3d-flat__image .s3d-flat__image__content .s3d-flat__image__buttons {
+  display: none !important;
+}
+
+p~p {
+  margin-top: 20px;
+}
+.MuiModal-root,
+#root {
+  *::selection {
+    color: var(--color-backgrounds-200);
+    background-color: var(--color-stroke-900);
+  }
+}
+
+
+.s3d-flat {
+  @include media-xs {
+    .s3d__title {
+      position: absolute;
+    }
+  }
+}

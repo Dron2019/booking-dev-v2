@@ -1,0 +1,70 @@
+@mixin notebooksAndMdStyle {
+    padding: 20px;
+    overflow-y: auto;
+    flex-direction: column;
+
+    position: relative;
+    // justify-content: center;
+    // align-items: center;
+    &>.PopupLayout,
+    &>.InfoAboutApartment {
+        border-radius: 0;
+        flex-grow: 0;
+    }
+    &>:first-child {
+        border-radius: 12px 12px 0 0;
+    }
+    &>:last-child {
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+.PopupWrapper {
+
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    padding: 3.7vh 3.5vw;
+
+    .ob_dashboard {
+        width: auto;
+    }
+
+    @media screen and (max-width: 1320px){
+        // flex-direction: column-reverse;
+    }
+
+    @media screen and (min-width: 1367px){
+        .InfoAboutApartment {
+            width: 25%;
+        }
+    }
+
+    @media screen and (max-width: 1366px){
+        padding: 40px;
+    }
+    @include media-notebooks {
+        @include notebooksAndMdStyle;
+    }
+    @include media-md{
+        @include notebooksAndMdStyle;
+    }
+
+    @include media-xs {
+        padding: 12px;
+        justify-content: flex-start;
+        align-content: flex-start;
+        .InfoAboutApartment {
+            margin: 0;
+        }
+    }
+
+    @media screen and (min-width: 1321px){
+        // &>.InfoAboutApartment {
+        //     width: 20%;
+        // }
+    }
+
+}

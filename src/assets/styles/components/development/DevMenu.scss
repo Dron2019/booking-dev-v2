@@ -1,0 +1,13 @@
+.DevMenu {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    &>* {
+        // @extend %ob_button_question;
+        @extend .ob_button_large;
+    }
+}
